@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "cra-module-import-aliasing"
+  }
+}

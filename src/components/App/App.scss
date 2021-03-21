@@ -1,0 +1,75 @@
+/* The following line can be included in a src/App.scss */
+$font-family-sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-size-base: 0.6875rem;
+$body-color: #000 !default;
+
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-custom {
+  padding: 0 5px 0;
+  outline: 0;
+  box-shadow: none;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid $black;
+  border-radius: 0;
+  min-width: 18.5rem;
+  text-align: left;
+
+  &::after {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &:focus,
+  &:hover {
+    color: inherit;
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+  }
+}
+
+.menu-custom {
+  border-radius: 0;
+  border: 0;
+  min-width: 18.5rem;
+
+  a {
+    border-bottom: 1px solid $black;
+  }
+}
+
+.defaultOptions {
+  opacity: 1;
+  transition: all 0.5s ease;
+
+  &.hide {
+    opacity: 0;
+  }
+}
+
+.customOptions {
+  opacity: 1;
+  transition: all 0.5s ease;
+
+  &.show {
+    opacity: 0;
+  }
+}
+
+.notActive {
+  display: none;
+}
