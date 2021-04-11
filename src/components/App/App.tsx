@@ -31,10 +31,11 @@ interface OutlineOptionsProps {
   options: any;
   curentValue: any;
   handleFunction: Function;
+  className?: string;
 }
 
 interface OutlineTeeImagesVariations {
-  name: string;
+  name?: string;
   config: { [key: string]: any };
   machineName?: string;
   options?: any;
@@ -44,20 +45,28 @@ interface OutlineTeeImagesVariations {
 
 const getSVG = (
   name: string,
-  color: any,
+  color?: any,
   tl: string = "+0",
-  sl: string,
-  collar: string
+  sl?: string,
+  collar?: string
 ) => {
   switch (name) {
     // Format icons
 
+    case "logo":
+      return (
+        <path
+          id="Fill-1"
+          d="M284.39034,32.58333l-5.0595-5.15476h5.0595Zm-31.25-12.7619v-4.119l4.07143,4.11905Zm-151.9881,8.33333a27.45065,27.45065,0,0,1-.4881,6.05953A6.97263,6.97263,0,0,1,98.84274,37.5Q95.27131,41.07143,86.938,41.07143q-8.33215,0-11.90477-3.57143a6.85509,6.85509,0,0,1-1.80952-3.28571,26.81316,26.81316,0,0,1-.4881-6.05953v-.69047H101.057Zm-58.33333,3a15.47821,15.47821,0,0,1-4.25,5.85834,19.04739,19.04739,0,0,1-23.51191,0,15.196,15.196,0,0,1-5.33333-9.52381H43.89036a16.84768,16.84768,0,0,1-1.01191,3.70119ZM15.057,11.96429A17.31126,17.31126,0,0,1,26.7725,7.91667a18.0931,18.0931,0,0,1,11.79643,4.04762,14.919,14.919,0,0,1,4.96547,7.89285H10.06893A15.4809,15.4809,0,0,1,15.11774,12ZM316.24868,40.53571V27.44048h22.9512V19.83333h-22.9512V8.53571h33.4155V.72619h-42.6893V19.95238H292.87963V.83333H284.438V19.95238H271.91537L253.11654.83333h-8.33333V19.95238H230.69988V.83333h-9.28453V19.95238H180.18916V.83333h-9.275V19.95238H144.47369V8.64286h18.41667V.83333H116.78321V8.64286h18.41667V19.95238H109.67607V.83333h-8.44048V19.95238H72.90345V.83333h-9.2869V19.95238H53.29511a22.92414,22.92414,0,0,0-7.14285-13.2619Q39.00941-.0006,26.77131,0,10.44987.19107,3.67607,11.5A25.0954,25.0954,0,0,0,7.58083,42.54762q7.14287,6.70179,19.25,6.6905,16.19107,0,23.2381-11.57026a24.08751,24.08751,0,0,0,3.46428-10.10834H63.59274V31.131a25.02923,25.02923,0,0,0,1.33333,8.64286,11.062,11.062,0,0,0,4.59523,5.79762q5.86965,3.57142,17.09525,3.57143,15.47677,0,20.369-6.76191c1.76191-2.5119,2.65476-6.27381,2.65476-11.29762V27.5119h25.52381V48.35714H144.438V27.5119h26.44047V48.35714h42.2024V40.54762H180.15226V27.45238h41.22618V48.29762h9.28572V27.45238h14.08333V48.29762H253.188V27.45238H264.7713l20.57144,20.84524h7.5357V27.45238h14.09525V48.29762h43.5238V40.4881Z"
+          fill-rule="evenodd"
+        />
+      );
     case "overSize":
       const styleOne = {
         fill: color,
         stroke: "#ccc",
         strokeWidth: "0.75px",
-        strokeLinejoin: "round",
+        // strokeLinejoin: "round",
       };
 
       // const styleTwo = {
@@ -143,7 +152,7 @@ const getSVG = (
                 <g id="F_2" data-name="F+2">
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -152,7 +161,7 @@ const getSVG = (
                   />
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -167,7 +176,7 @@ const getSVG = (
                 <g id="F_1" data-name="F+1">
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -176,7 +185,7 @@ const getSVG = (
                   />
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -191,7 +200,7 @@ const getSVG = (
                 <g id="F_0" data-name="F+0">
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -200,7 +209,7 @@ const getSVG = (
                   />
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -215,7 +224,7 @@ const getSVG = (
                 <g id="F-1">
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -224,7 +233,7 @@ const getSVG = (
                   />
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -239,7 +248,7 @@ const getSVG = (
                 <g id="F-2">
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -248,7 +257,7 @@ const getSVG = (
                   />
                   <path
                     style={{
-                      strokeLinejoin: "bevel",
+                      // strokeLinejoin: "bevel",
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
@@ -284,7 +293,7 @@ const getSVG = (
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
-                      strokeLinejoin: "round",
+                      // strokeLinejoin: "round",
                     }}
                     d="M250.33,122.21c19.53,0,42.67-9.18,51.28-39.57L319,88.85c-12.44,43.91-52.85,51.21-68.71,51.21H250c-15.86,0-56.27-7.3-68.71-51.21l17.43-6.21c8.61,30.39,31.75,39.57,51.28,39.57Z"
                   />
@@ -305,7 +314,7 @@ const getSVG = (
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
-                      strokeLinejoin: "round",
+                      // strokeLinejoin: "round",
                     }}
                     d="M250,140.06c15.86,0,56.27-7.3,68.71-51.21l-14.43-4.21C295.66,115,269.52,125.21,250,125.21S204.32,115,195.71,84.64l-14.43,4.21C193.72,132.76,234.13,140.06,250,140.06Z"
                   />
@@ -324,7 +333,7 @@ const getSVG = (
                       fill: color,
                       stroke: "#ccc",
                       strokeWidth: "0.75px",
-                      strokeLinejoin: "round",
+                      // strokeLinejoin: "round",
                     }}
                     d="M250,140.06c15.86,0,56.27-7.3,68.71-51.21l-11.05-3.22c-7,32.54-36.63,43.59-57.65,43.59s-50.62-11-57.65-43.59l-11,3.22C193.72,132.76,234.13,140.06,250,140.06Z"
                   />
@@ -379,10 +388,10 @@ const TeeImagesVariations: React.FunctionComponent<OutlineTeeImagesVariations> =
   console.log(config);
   return (
     <>
-      <h2>Hello {name}</h2>
+      {name && <h2>Hello {name}</h2>}
       <svg
         // className={[css.svg, svgClassName || ""].join(" ")}
-        className={"w-25"}
+        className={"w-50 mx-auto"}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 500 647.06"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -400,12 +409,20 @@ const TeeImagesVariations: React.FunctionComponent<OutlineTeeImagesVariations> =
 };
 
 const OutlineOptions = (prop: OutlineOptionsProps) => {
-  const { name, machineName, options, handleFunction, curentValue } = prop;
+  const {
+    name,
+    machineName,
+    options,
+    handleFunction,
+    curentValue,
+    className,
+  } = prop;
 
   console.log(curentValue);
 
   return (
     <Dropdown
+      className={["mb-3", "dropdown-custom", className || ""].join(" ")}
       onClick={(e: any) =>
         e.target.dataset && e.target.dataset.name ? handleFunction(e) : null
       }
@@ -571,13 +588,13 @@ const Steps = () => {
         onTansition ? "onTransition hide" : "",
       ].join(" ")}
     >
-      <div className="row">
-        <div className="col">
-          <h2>OVERSIZED TEE</h2>
-          <h5>$80.00 AUD </h5>
-          <h5>CUSTOM $120.00 AUD</h5>
+      <div className="row pt-3">
+        <div className="col-3">
+          <h4>OVERSIZED TEE</h4>
+          <p>$80.00 AUD </p>
+          <p>CUSTOM $120.00 AUD</p>
         </div>
-        <div className="col">
+        <div className="col-9">
           <OutlineOptions
             name={"Choose Size"}
             machineName={"size"}
@@ -603,8 +620,8 @@ const Steps = () => {
           />
 
           <p>
-            Jet Black Oversized tee in light, medium and heavy weight cotton.
-            Sofened and pre-shrunk.
+            Jet Black Oversized tee in light, medium and
+            <br /> heavy weight cotton. Sofened and pre-shrunk.
           </p>
           <ul>
             <li>Oversized fit.</li>
@@ -612,8 +629,16 @@ const Steps = () => {
             <li>Stitched label branding</li>
           </ul>
 
-          <Button block={true}>Add To Basket</Button>
           <Button
+            className={"text-uppercase w-50"}
+            variant={"dark"}
+            block={true}
+          >
+            Add To Basket
+          </Button>
+          <Button
+            variant={"outline"}
+            className={"text-uppercase w-50 btn-outline-dark"}
             block={true}
             onClick={(e) => {
               setOnTansition(true);
@@ -623,8 +648,8 @@ const Steps = () => {
           </Button>
 
           <p>Customisation options available:</p>
-          <div className="row">
-            <ul className={"col-1"}>
+          <div className="row px-3">
+            <ul className={"col"}>
               <li>Collar </li>
               <li>Hem</li>
               <li>Length Torso</li>
@@ -655,6 +680,7 @@ const Steps = () => {
       <img src={collarHigh} alt="" className={"m-auto mb-5"} />
 
       <OutlineOptions
+        className={"mt-5 mx-auto"}
         name={"Choose Collar"}
         machineName={"collar"}
         options={collar}
@@ -683,6 +709,7 @@ const Steps = () => {
       </div>
 
       <OutlineOptions
+        className={"mt-5 mx-auto"}
         name={"Choose hem"}
         machineName={"hem"}
         options={hem}
@@ -806,7 +833,7 @@ const Steps = () => {
       ].join(" ")}
     >
       <div className="row h-100">
-        <div className="col d-flex flex-column m-auto">
+        <div className="col-2 d-flex flex-column m-auto">
           {Object.keys(customTee).map((key, i) => {
             let keyName = key;
             console.log(
@@ -828,16 +855,18 @@ const Steps = () => {
                 className={[
                   i === 0 ? "mt-5" : "",
                   i === customTee.lenght ? "mb-5" : "",
-                  "my-2",
+                  activeTab === keyName ? "text-body" : "text-black-50",
+                  "my-2 text-decoration-none text-right w-50",
                 ].join(" ")}
-                variant={activeTab !== keyName ? "outline-primary" : "primary"}
+                // variant={activeTab !== keyName ? "link" : "primary"}
+                variant={"link"}
                 onClick={() => {
                   setActiveTab(keyName);
                 }}
               >
-                <span className={"m-0 h1"}>{keyName}</span>
+                <span className={"m-0 h5 text-uppercase"}>{keyName}</span>
                 <br />
-                <span className={"h3"}>
+                <span className={"h5"}>
                   {customTee[keyName] &&
                   keyName !== "fabric" &&
                   keyName !== "length" ? (
@@ -855,7 +884,7 @@ const Steps = () => {
             );
           })}
         </div>
-        <div className="col d-flex flex-column">
+        <div className="col-10 d-flex flex-column">
           <div className={"wrapper m-auto"}>
             {advanceOptions[activeTab] && advanceOptions[activeTab]}
           </div>
@@ -866,9 +895,9 @@ const Steps = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="col">
-          {<TeeImagesVariations name={"New"} config={customTee} />}
+      <div className="row my-auto w-100">
+        <div className="col d-flex">
+          {<TeeImagesVariations config={customTee} />}
         </div>
         <div className="col">
           {customizerEnabled && defaultScreenHtml}
@@ -884,9 +913,44 @@ const Steps = () => {
         // customTee["shape"] !== "" &&
         customTee["fabric"] !== "" &&
         customTee["color"] && (
-          <Button
-            onClick={() =>
-              alert(`Your Selection is collar: ${customTee["collar"]}
+          <>
+            <div
+              className={
+                "position-absolute w-100 h-100 badge-danger bg-dark d-flex"
+              }
+            >
+              <div className={"d-flex flex-column h-50 m-auto w-50"}>
+                <svg
+                  // className={[css.svg, svgClassName || ""].join(" ")}
+                  className={"w-100 mx-auto"}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 500 647.06"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                  {getSVG("logo")}
+                </svg>
+                Your Selection is collar: {customTee["collar"]}
+                <br />
+                hem: {customTee["hem"]}
+                <br />
+                Length Torso: {customTee["lengthTorso"]}
+                <br />
+                Length Sleeve: {customTee["lengthSleeve"]}
+                <br />
+                size: {customTee["size"]}
+                <br />
+                shape: {customTee["shape"]}
+                <br />
+                fabric: {customTee["fabric"]}
+                <br />
+                color: {customTee["color"]}
+                <br />
+                {<TeeImagesVariations config={customTee} />}
+                <Button
+                  variant={"outline-light"}
+                  className={"w-25 mt-5"}
+                  onClick={() =>
+                    alert(`Your Selection is collar: ${customTee["collar"]}
         hem: ${customTee["hem"]}
         Length Torso: ${customTee["lengthTorso"]}
         Length Sleeve: ${customTee["lengthSleeve"]}
@@ -894,10 +958,13 @@ const Steps = () => {
         shape: ${customTee["shape"]}
         fabric: ${customTee["fabric"]}
         color: ${customTee["color"]}`)
-            }
-          >
-            Buy
-          </Button>
+                  }
+                >
+                  Buy
+                </Button>
+              </div>
+            </div>
+          </>
         )}
       {/* {html} */}
     </>
@@ -906,7 +973,7 @@ const Steps = () => {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex">
       <Steps />
     </div>
   );

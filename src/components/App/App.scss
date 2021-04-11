@@ -5,6 +5,10 @@ $body-color: #000 !default;
 
 @import "~bootstrap/scss/bootstrap";
 
+body {
+  background-color: #f0f0f0;
+}
+
 html,
 body,
 #root,
@@ -16,7 +20,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.dropdown-custom {
+  max-width: 200px;
+}
+
 .btn-custom {
+  display: flex;
   padding: 0 5px 0;
   outline: 0;
   box-shadow: none;
@@ -25,12 +34,21 @@ body {
   text-decoration: none;
   border-bottom: 1px solid $black;
   border-radius: 0;
-  min-width: 18.5rem;
+  min-width: 12.5rem;
   text-align: left;
 
   &::after {
+    display: flex-inline;
     margin-left: auto;
     margin-right: 0;
+    width: 12px;
+    height: 9px;
+    border-top: 0;
+    border-right: 0 transparent;
+    border-bottom: 0;
+    border-left: 0 transparent;
+
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2212px%22%20height%3D%229px%22%20viewBox%3D%220%200%2012%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E %20%20%20%20%3Ctitle%3EShape%3C%2Ftitle%3E %20%20%20%20%3Cg%20id%3D%22Symbols%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E %20%20%20%20%20%20%20%20%3Cg%20id%3D%22CHOOSE%22%20transform%3D%22translate%28-180.000000%2C%20-8.000000%29%22%20fill%3D%22%23000000%22%3E %20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Icon-24px%22%20transform%3D%22translate%28174.000000%2C%200.000000%29%22%3E %20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpolygon%20id%3D%22Shape%22%20points%3D%227.41%208.84%2012%2013.42%2016.59%208.84%2018%2010.25%2012%2016.25%206%2010.25%22%3E%3C%2Fpolygon%3E %20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E %20%20%20%20%20%20%20%20%3C%2Fg%3E %20%20%20%20%3C%2Fg%3E %3C%2Fsvg%3E");
   }
 
   &:focus,
